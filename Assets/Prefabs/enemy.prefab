@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5812394920284880867}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -5
   EnemyArrow: {fileID: 8708979098039763077, guid: 464a8b99f33908d42b24a867a02d14b9, type: 3}
+  shootfreq: 0.1
+  enemy_sight: 2
+  HP: 0
+  Arrow: {fileID: 0}
 --- !u!61 &5812394920284880867
 BoxCollider2D:
   m_ObjectHideFlags: 0

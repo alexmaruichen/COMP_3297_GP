@@ -6,6 +6,7 @@ public class Arrow : MonoBehaviour
 {
 
     public int speed = 5;
+    public int damage;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,12 @@ public class Arrow : MonoBehaviour
         // Destroy the bullet
         Destroy(gameObject);        
     }
-
+    void OnTriggerEnter2D(Collider2D obj)
+    {
+        string tag = obj.gameObject.tag;
+        if (tag != gameObject.tag)
+            Destroy(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {

@@ -10,12 +10,14 @@ public class enemyScript : MonoBehaviour
     public float shootfreq = 0.1f;
     private Transform target;
     public float enemy_sight = 2f;
+    public int HP;
+    public GameObject Arrow;
     // Start is called before the first frame update
     void Start()
     {
         //define target for chasing
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-       
+        HP = 1;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         Vector2 v = rb.velocity;
         v.x = 0;
@@ -42,29 +44,33 @@ public class enemyScript : MonoBehaviour
 
     //Function called when the enemy collides with another object
      void OnTriggerEnter2D(Collider2D obj)
-    {
+     {
         string name = obj.gameObject.name;
 
         //if it collided with bullet
         if (name == "arrow(Clone)")
         {
+            HP -= obj.GetComponent<Arrow>().damage;
+        }
+        if (HP <= 0)
+        {
             Destroy(gameObject);
 
             Destroy(obj.gameObject);
         }
-
         //if it collided with the spaceship
-        if (name == "spaceship")
+        if (name == "Main")
         {
             Destroy(gameObject);
         }
-    } 
+     } 
     
     void shoot()
     {
         Renderer rd = GetComponent<Renderer>();
 
-        Instantiate(EnemyArrow, transform.position, transform.rotation);
+        GameObject instance = Instantiate(EnemyArrow, transform.position, transform.rotation);
+        instance.GetComponent<Arrow>().damage = 1;
     }
 
 }

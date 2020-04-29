@@ -160,11 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7342086741643530185, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.45
       objectReference: {fileID: 0}
     - target: {fileID: 7342086741643530185, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.44
       objectReference: {fileID: 0}
     - target: {fileID: 7342086741643530185, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 1198325652}
   - component: {fileID: 1198325654}
   - component: {fileID: 1198325655}
+  - component: {fileID: 1198325656}
   m_Layer: 0
   m_Name: Main
   m_TagString: Player
@@ -480,6 +481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 2395712314035162167, guid: d752538e04cec2442bc8010968e6e9a7, type: 3}
+  HP: 0
 --- !u!50 &1198325655
 Rigidbody2D:
   serializedVersion: 4
@@ -501,3 +503,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &1198325656
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198325651}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 5, y: 5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5}
+  m_EdgeRadius: 0
