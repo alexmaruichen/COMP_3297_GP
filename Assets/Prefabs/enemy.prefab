@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5812394920284880867}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: enemy
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 40360aa275c94bc4799faf6994ae4990, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,10 +120,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -5
   EnemyArrow: {fileID: 8708979098039763077, guid: 464a8b99f33908d42b24a867a02d14b9, type: 3}
-  shootfreq: 0.1
+  ShootingMethod: {fileID: 7165570416160092282, guid: 6f894515509cc9647a9762c194a1f376, type: 3}
   enemy_sight: 2
-  HP: 0
-  Arrow: {fileID: 0}
+  HP: 1
 --- !u!61 &5812394920284880867
 BoxCollider2D:
   m_ObjectHideFlags: 0

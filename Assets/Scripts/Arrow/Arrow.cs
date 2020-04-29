@@ -23,7 +23,7 @@ public class Arrow : MonoBehaviour
     void OnTriggerEnter2D(Collider2D obj)
     {
         string tag = obj.gameObject.tag;
-        if (tag != gameObject.tag)
+        if (tag != "Item" && tag != gameObject.tag)
             Destroy(gameObject);
     }
     // Update is called once per frame
