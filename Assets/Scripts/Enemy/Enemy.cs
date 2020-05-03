@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
      {
         string name = obj.gameObject.name;
         //if it collided with bullet
-        if (name == "Arrow(Clone)")
+        if (name == "arrow(Clone)")
             HP -= obj.gameObject.GetComponent<Arrow>().damage;
         else if (name == "Main")
             HP--;

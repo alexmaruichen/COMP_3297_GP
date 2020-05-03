@@ -6,7 +6,7 @@ public class Arrow : MonoBehaviour
 {
 
     public int speed = 5;
-    public int damage;
+    public int damage = 1;
 
     // Start is called before the first frame update
     void Start()
