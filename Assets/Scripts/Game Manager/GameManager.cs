@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
         }
     }
+    public void OnStart()
+    {
+        SceneManager.LoadScene("Chapter1");
+    }
     public void OnResume()
     {
         menu.SetActive(false);
@@ -33,6 +37,7 @@ public class GameManager : MonoBehaviour
     }
     public void OnMainMenu()
     {
+        SceneManager.LoadScene("Main Menu");
     }
     public void OnExit()
     {
