@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
-using UnityEditor.Profiling.Memory.Experimental;
-using UnityEditor.Timeline;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -40,6 +38,7 @@ public class Enemy : MonoBehaviour
     {
        
     }
+
     void OnWillRenderObject()
     {
         //make the enemy chase the player

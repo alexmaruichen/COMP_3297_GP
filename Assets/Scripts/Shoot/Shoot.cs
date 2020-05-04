@@ -14,8 +14,16 @@ public class Shoot : MonoBehaviour
     // method 3 : double speed
     public void shoot(int method, GameObject GO, Transform GO_Transform, int damage)
     {
+ /*       Vector3 angles = Vector3.up;
+        angles.x = 0;
+        angles.y = 0;
+        angles.z = 180;
+        GO_Transform.Rotate(angles);*/
         GameObject instance = Instantiate(GO, GO_Transform.position, GO_Transform.rotation);
         instance.GetComponent<Arrow>().damage = damage;
+ /*       Vector3 arrow_euler = instance.transform.eulerAngles;
+        arrow_euler.z += 90;
+        instance.transform.eulerAngles = arrow_euler;*/
         if (method == 0) ;
         if (method == 1)
         {

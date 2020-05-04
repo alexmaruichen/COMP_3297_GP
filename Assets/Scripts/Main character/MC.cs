@@ -7,6 +7,8 @@ public class MC : MonoBehaviour
     public GameObject Arrow;
     public GameObject EnemyArrow;
     public GameObject ShootingMethod;
+    public Font font;
+    public float speed = 2;
     private Rigidbody2D rb;
     private Vector2 v;
     private int HP = 5;
@@ -26,7 +28,12 @@ public class MC : MonoBehaviour
     // Update is called once per frame
     void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, 100, 90), HP.ToString());
+        GUIStyle fontStyle = new GUIStyle();
+        fontStyle.normal.background = null;  
+        fontStyle.normal.textColor = new Color(1, 1, 1);
+        fontStyle.fontSize = 40;
+        fontStyle.font = font;
+        GUI.Label(new Rect(0, 0, 100, 30), "HP " + HP.ToString(), fontStyle);
     }
 
     void OnTriggerEnter2D(Collider2D obj)
@@ -54,8 +61,8 @@ public class MC : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         v = rb.velocity;
-        v.x = Input.GetAxis("Horizontal") * 2;
-        v.y = Input.GetAxis("Vertical") * 2;
+        v.x = Input.GetAxis("Horizontal") * speed;
+        v.y = Input.GetAxis("Vertical") * speed;
         rb.velocity = v;
         Vector3 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float angle = 360 - Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;

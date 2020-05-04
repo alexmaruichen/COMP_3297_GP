@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 1828d5671493a394c979572a46ec050d, type: 3}
+  m_Sprite: {fileID: 7523391733827534951, guid: aac92a92e1fdec24e9ed3a24c8bf8a98, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,8 @@ MonoBehaviour:
   Arrow: {fileID: 2395712314035162167, guid: d752538e04cec2442bc8010968e6e9a7, type: 3}
   EnemyArrow: {fileID: 8708979098039763077, guid: 464a8b99f33908d42b24a867a02d14b9, type: 3}
   ShootingMethod: {fileID: 7165570416160092282, guid: 6f894515509cc9647a9762c194a1f376, type: 3}
-  HP: 0
+  font: {fileID: 12800000, guid: 909c262a9e8df8645a1a545810ec0caa, type: 3}
+  speed: 2
 --- !u!50 &5095909011313567712
 Rigidbody2D:
   serializedVersion: 4
@@ -139,7 +140,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5, y: 5}
+    oldSize: {x: 0.15, y: 0.24}
     newSize: {x: 5, y: 5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
