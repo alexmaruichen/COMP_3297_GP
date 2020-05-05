@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour
     private float speed = 1f;
     public GameObject EnemyArrow;
     public GameObject ShootingMethod;
+    public GameObject GM;
     private float shootfreq = 1f;
     private Transform target;
     private float enemy_sight = 2f;
@@ -57,7 +58,10 @@ public class Enemy : MonoBehaviour
         else if (name == "Main")
             HP--;
         if (HP <= 0)
+        {
+            GM.GetComponent<GameManager>().score++;
             Destroy(gameObject);
+        }
      } 
     
     void shoot()

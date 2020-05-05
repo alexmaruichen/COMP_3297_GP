@@ -9,12 +9,16 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1197199201894237043, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
       propertyPath: m_Name
-      value: slime
+      value: slime Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3121439067217971273, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 368543389579951487, guid: 000ca393eb122d444b5c10da2769d297, type: 3}
+    - target: {fileID: 3463953770542937682, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
+      propertyPath: GM
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5812394920284880867, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 0.32

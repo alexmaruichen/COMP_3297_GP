@@ -120,6 +120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyArrow: {fileID: 8708979098039763077, guid: 464a8b99f33908d42b24a867a02d14b9, type: 3}
   ShootingMethod: {fileID: 7165570416160092282, guid: 6f894515509cc9647a9762c194a1f376, type: 3}
+  GM: {fileID: 0}
 --- !u!61 &2635091699241712819
 BoxCollider2D:
   m_ObjectHideFlags: 0

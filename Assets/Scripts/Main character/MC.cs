@@ -9,9 +9,9 @@ public class MC : MonoBehaviour
     public GameObject ShootingMethod;
     public Font font;
     public float speed = 2;
+    public volatile int HP = 5;
     private Rigidbody2D rb;
     private Vector2 v;
-    private int HP = 5;
     private int method = 0;
     private int damage = 1;
     private float shootfreq = 1f;
@@ -26,15 +26,6 @@ public class MC : MonoBehaviour
         ShootingMethod.GetComponent<Shoot>().shoot(method, Arrow, transform, damage);
     }
     // Update is called once per frame
-    void OnGUI()
-    {
-        GUIStyle fontStyle = new GUIStyle();
-        fontStyle.normal.background = null;  
-        fontStyle.normal.textColor = new Color(1, 1, 1);
-        fontStyle.fontSize = 40;
-        fontStyle.font = font;
-        GUI.Label(new Rect(0, 0, 100, 30), "HP " + HP.ToString(), fontStyle);
-    }
 
     void OnTriggerEnter2D(Collider2D obj)
     {
