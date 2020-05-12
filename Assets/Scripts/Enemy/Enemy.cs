@@ -6,16 +6,16 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Public variable that contains the speed of the enemy
-    private float speed = 1f;
+    public float speed = 1f;
     public GameObject EnemyArrow;
     public GameObject ShootingMethod;
     public GameObject GM;
-    private float shootfreq = 1f;
+    public float shootfreq = 1f;
     private Transform target;
-    private float enemy_sight = 2f;
-    private int HP = 1;
+    public float enemy_sight = 2f;
+    public int HP = 1;
     private int method = 0;
-    private int damage = 1;
+    public int damage = 1;
     // Start is called before the first frame update
     void Start()
     {
