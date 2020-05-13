@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-
+    public Rigidbody2D rb;
     public int speed = 5;
     public int damage = 1;
 
@@ -30,5 +30,7 @@ public class Arrow : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
+        if (rb.position.x > 30 || rb.position.x < 0 || rb.position.y > 0 || rb.position.y < -30)
+            Destroy(gameObject);
     }
 }

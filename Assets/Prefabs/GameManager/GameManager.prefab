@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+  font: {fileID: 0}
+  MC: {fileID: 0}
+  score: 0
+  HP: 0

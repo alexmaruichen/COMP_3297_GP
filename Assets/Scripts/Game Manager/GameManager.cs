@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject menu;
+    public GameObject p_menu;
+    public GameObject g_menu;
+    public GameObject StageClear;
     public Font font;
     public GameObject MC;
     public volatile int score = 0;
     private GUIStyle fontStyle = new GUIStyle();
     public volatile int HP;
+    private float s_time = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +27,15 @@ public class GameManager : MonoBehaviour
     }
     void OnGUI()
     {
-        GUI.Label(new Rect(0, 0, 100, 40), "HP " + HP.ToString(), fontStyle);
-        GUI.Label(new Rect(0, 40, 100, 40), "Score " + score.ToString(), fontStyle);
-        if (HP <= 0)
+        if (SceneManager.GetActiveScene().name != "Main Menu")
         {
-            GUI.Label(new Rect(Screen.width * 0.4f, Screen.height * 0.4f, Screen.width * 0.2f, Screen.height * 0.2f), "Game Over", fontStyle);
-            Time.timeScale = 0;
+            GUI.Label(new Rect(0, 0, 100, 40), "HP " + HP.ToString(), fontStyle);
+            GUI.Label(new Rect(0, 40, 100, 40), "Score " + score.ToString(), fontStyle);
+            if (HP <= 0)
+            {
+                g_menu.SetActive(true);
+                Time.timeScale = 0;
+            }
         }
     }
     // Update is called once per frame
@@ -40,23 +47,41 @@ public class GameManager : MonoBehaviour
             HP = 0;
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            menu.SetActive(true);
+            p_menu.SetActive(true);
             Time.timeScale = 0;
+        }
+        if (p_menu.active == false)
+            Time.timeScale = 1;
+        if (! GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            StageClear.SetActive(true);
+            if (s_time == 0)
+                s_time = Time.time;
+            if (Time.time - s_time >= 3)
+            {
+                s_time = 0;
+                string scene_name = SceneManager.GetActiveScene().name;
+                char[] str = scene_name.ToCharArray();
+                str[scene_name.Length - 1] = (char)((int)(str[scene_name.Length - 1]) + 1);
+                scene_name = new string(str);
+                SceneManager.LoadScene(scene_name);
+            }
         }
     }
     public void OnStart()
     {
-        SceneManager.LoadScene("Chapter1");
+        SceneManager.LoadScene("Opening");
+        Time.timeScale = 1;
     }
     public void OnResume()
     {
-        menu.SetActive(false);
+        p_menu.SetActive(false);
         Time.timeScale = 1;
     }
     public void OnRestart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
+        OnResume();
     }
     public void OnMainMenu()
     {

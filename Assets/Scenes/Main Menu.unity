@@ -295,6 +295,14 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 7828428562044162018}
+    - target: {fileID: 1766475014946407362, guid: 6d2d01b75c1f8a74ea3308dbddc3a242, type: 3}
+      propertyPath: p_menu
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1766475014946407362, guid: 6d2d01b75c1f8a74ea3308dbddc3a242, type: 3}
+      propertyPath: font
+      value: 
+      objectReference: {fileID: 12800000, guid: 909c262a9e8df8645a1a545810ec0caa, type: 3}
     - target: {fileID: 1766475014946407364, guid: 6d2d01b75c1f8a74ea3308dbddc3a242, type: 3}
       propertyPath: m_Name
       value: GameManager
