@@ -132,7 +132,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1197199201894237043, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
       propertyPath: m_Name
-      value: enemy
+      value: Princess
+      objectReference: {fileID: 0}
+    - target: {fileID: 1197199201894237043, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 3121439067217971273, guid: 18a29a13b104ea94db2275b917215de7, type: 3}
       propertyPath: m_Sprite

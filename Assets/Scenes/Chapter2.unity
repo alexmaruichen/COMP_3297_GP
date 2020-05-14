@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 48934039}
   m_Layer: 0
   m_Name: ghosts
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 984864111}
   m_Layer: 0
   m_Name: magicians
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1913,7 +1913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947606592134506844, guid: d55be2d874c63dc40a2a67bebdc53158, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 40
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3947606592134506844, guid: d55be2d874c63dc40a2a67bebdc53158, type: 3}
       propertyPath: m_FontData.m_RichText
@@ -1925,15 +1925,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3947606592134506844, guid: d55be2d874c63dc40a2a67bebdc53158, type: 3}
       propertyPath: m_FontData.m_BestFit
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3947606592134506844, guid: d55be2d874c63dc40a2a67bebdc53158, type: 3}
       propertyPath: m_FontData.m_AlignByGeometry
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3947606592134506844, guid: d55be2d874c63dc40a2a67bebdc53158, type: 3}
       propertyPath: m_FontData.m_FontStyle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4171111657220918538, guid: d55be2d874c63dc40a2a67bebdc53158, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
