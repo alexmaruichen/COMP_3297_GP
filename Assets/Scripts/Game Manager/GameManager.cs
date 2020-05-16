@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
     {
         fontStyle.normal.background = null;
         fontStyle.normal.textColor = new Color(1, 1, 1);
-        fontStyle.fontSize = 40;
+        fontStyle.fontSize = 50;
         fontStyle.font = font;
     }
     void OnGUI()
