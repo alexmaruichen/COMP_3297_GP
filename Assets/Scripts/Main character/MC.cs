@@ -18,7 +18,7 @@ public class MC : MonoBehaviour
     private int damage = 1;
     private float shootfreq = 1f;
     private float xmin, xmax, ymin, ymax, cHeight, cWidth;
-
+    public AudioSource AS;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,10 +29,13 @@ public class MC : MonoBehaviour
         ymax = -cHeight / 2;
         ymin = -(30 - cHeight / 2);
         InvokeRepeating("shoot", shootfreq, shootfreq);
+        AS = GetComponent<AudioSource>();
     }
     void shoot()
     {
+        AS.PlayOneShot(AS.clip);
         ShootingMethod.GetComponent<Shoot>().shoot(method, Arrow, transform, damage);
+
     }
     // Update is called once per frame
 
