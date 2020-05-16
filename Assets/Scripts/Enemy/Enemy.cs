@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     public int HP = 1;
     private int method = 0;
     public int damage = 1;
+    public AudioSource AS;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class Enemy : MonoBehaviour
         //call the shoot function every shootfreq seconds
         InvokeRepeating("shoot", shootfreq, shootfreq);
 
+        AS = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,13 +56,22 @@ public class Enemy : MonoBehaviour
         string name = obj.gameObject.name;
         //if it collided with bullet
         if (name == "arrow(Clone)")
+        {
+            AudioSource.PlayClipAtPoint(AS.clip,transform.position);
             HP -= obj.gameObject.GetComponent<Arrow>().damage;
+            
+        }
         else if (name == "Main")
+        {
+            AudioSource.PlayClipAtPoint(AS.clip, transform.position);
             HP--;
+            
+        }
+            
         if (HP <= 0)
         {
             GM.GetComponent<GameManager>().score++;
-            Destroy(gameObject);
+            Destroy(gameObject);   
         }
      } 
     
