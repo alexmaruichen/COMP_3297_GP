@@ -745,6 +745,10 @@ PrefabInstance:
       propertyPath: StageClear
       value: 
       objectReference: {fileID: 1112540378}
+    - target: {fileID: 1766475014946407362, guid: 6d2d01b75c1f8a74ea3308dbddc3a242, type: 3}
+      propertyPath: HP
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1766475014946407364, guid: 6d2d01b75c1f8a74ea3308dbddc3a242, type: 3}
       propertyPath: m_Name
       value: GameManager
