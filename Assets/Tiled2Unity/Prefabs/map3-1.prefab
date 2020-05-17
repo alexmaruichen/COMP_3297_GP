@@ -28,7 +28,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 206342060695930960}
+  - {fileID: 816644101142481530}
   m_Father: {fileID: 1240394774287988069}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1874989c5e2da094ea00112c6a895694, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &4273377141897050821
+--- !u!1 &3903541309781316682
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,10 +205,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 206342060695930960}
-  - component: {fileID: 372625228885794009}
-  - component: {fileID: 592582454300335493}
-  - component: {fileID: 1974361918491881685}
+  - component: {fileID: 816644101142481530}
+  - component: {fileID: 7182770797173751168}
+  - component: {fileID: 5586869253707636717}
+  - component: {fileID: 5218315877786939668}
   m_Layer: 0
   m_Name: Cabbin on a lake
   m_TagString: Untagged
@@ -216,13 +216,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &206342060695930960
+--- !u!4 &816644101142481530
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4273377141897050821}
+  m_GameObject: {fileID: 3903541309781316682}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -230,21 +230,21 @@ Transform:
   m_Father: {fileID: 7052610629336074879}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &372625228885794009
+--- !u!33 &7182770797173751168
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4273377141897050821}
+  m_GameObject: {fileID: 3903541309781316682}
   m_Mesh: {fileID: -4463470779429888319, guid: 7ba07957533934ad2ac86135b8d1a6dd, type: 3}
---- !u!23 &592582454300335493
+--- !u!23 &5586869253707636717
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4273377141897050821}
+  m_GameObject: {fileID: 3903541309781316682}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -279,13 +279,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1974361918491881685
+--- !u!114 &5218315877786939668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4273377141897050821}
+  m_GameObject: {fileID: 3903541309781316682}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1874989c5e2da094ea00112c6a895694, type: 3}
